@@ -2,8 +2,8 @@
 name: Ruby
 env:
   EB_PACKAGE_S3_BUCKET_NAME : "flash-githubdeploy"
-  EB_APPLICATION_NAME       : "demoone"
-  EB_ENVIRONMENT_NAME       : "demoone-env"
+  EB_APPLICATION_NAME       : "rubydemo"
+  EB_ENVIRONMENT_NAME       : "rubydemo-env"
   DEPLOY_PACKAGE_NAME       : "flash-githubdeploy-${{ github.sha }}.zip"
   AWS_REGION_NAME           : "us-east-1"
 
@@ -24,7 +24,7 @@ jobs:
     # uses: ruby/setup-ruby@v1
       uses: ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
       with:
-        ruby-version: 2.6.6
+        ruby-version: 2.6.x
     - name: Install dependencies
       run: bundle install
     - name: Create ZIP deployment package
