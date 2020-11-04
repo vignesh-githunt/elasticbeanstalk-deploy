@@ -1,10 +1,10 @@
 
 name: Ruby
 env:
-  EB_PACKAGE_S3_BUCKET_NAME : "flash-github"
+  EB_PACKAGE_S3_BUCKET_NAME : "flash-githubdeploy"
   EB_APPLICATION_NAME       : "sampleone"
   EB_ENVIRONMENT_NAME       : "sampleone-env"
-  DEPLOY_PACKAGE_NAME       : "flash-github-${{ github.sha }}.zip"
+  DEPLOY_PACKAGE_NAME       : "flash-githubdeploy-${{ github.sha }}.zip"
   AWS_REGION_NAME           : "us-east-1"
 
 on:
@@ -27,8 +27,6 @@ jobs:
         ruby-version: 2.6.6
     - name: Install dependencies
       run: bundle install
-    - name: Run tests
-      run: bundle exec rake
     - name: Create ZIP deployment package
       run : zip -r ${{ env.DEPLOY_PACKAGE_NAME }} ./  -x  *.git*
            
