@@ -1,0 +1,161 @@
+@import "icon-variables";
+
+// @font-face {
+//   font-family: '#{$icon-font-family}';
+//   src:
+//     url('#{$icon-font-path}/#{$icon-font-family}.ttf?aue889') format('truetype'),
+//     url('#{$icon-font-path}/#{$icon-font-family}.woff?aue889') format('woff'),
+//     url('#{$icon-font-path}/#{$icon-font-family}.icon?aue889##{$icon-font-family}') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: block;
+// }
+
+@font-face {
+  font-family: '#{$icon-font-family}';
+  src:
+    url('#{$icon-font-path}/#{$icon-font-family}.ttf?9nkfi7') format('truetype'),
+    url('#{$icon-font-path}/#{$icon-font-family}.woff?9nkfi7') format('woff'),
+    url('#{$icon-font-path}/#{$icon-font-family}.icon?9nkfi7##{$icon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.svgicon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icon-font-family}' !important;
+  // speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.trucadence-icon {
+  &:before {
+    content: $trucadence-icon;     
+  }
+}
+.speed-30 .path1 {
+  &:before {
+    content: $speed-30-path1;  
+    color: rgb(255, 255, 255);
+  }
+}
+.speed-30 .path2 {
+  &:before {
+    content: $speed-30-path2;  
+    margin-left: -1em;  
+    color: rgb(185, 190, 193);
+  }
+}
+.speed-30 .path3 {
+  &:before {
+    content: $speed-30-path3;  
+    margin-left: -1em;  
+    color: rgb(232, 39, 48);
+  }
+}
+.speed-30 .path4 {
+  &:before {
+    content: $speed-30-path4;  
+    margin-left: -1em;  
+    color: rgb(232, 39, 48);
+  }
+}
+.speed-30 .path5 {
+  &:before {
+    content: $speed-30-path5;  
+    margin-left: -1em;  
+    color: rgb(232, 39, 48);
+  }
+}
+.speed-100 .path1 {
+  &:before {
+    content: $speed-100-path1;  
+    color: rgb(255, 255, 255);
+  }
+}
+.speed-100 .path2 {
+  &:before {
+    content: $speed-100-path2;  
+    margin-left: -1em;  
+    color: rgb(185, 190, 193);
+  }
+}
+.speed-100 .path3 {
+  &:before {
+    content: $speed-100-path3;  
+    margin-left: -1em;  
+    color: rgb(232, 39, 48);
+  }
+}
+.speed-100 .path4 {
+  &:before {
+    content: $speed-100-path4;  
+    margin-left: -1em;  
+    color: rgb(232, 39, 48);
+  }
+}
+.speed-100 .path5 {
+  &:before {
+    content: $speed-100-path5;  
+    margin-left: -1em;  
+    color: rgb(232, 39, 48);
+  }
+}
+.speed-800 .path1 {
+  &:before {
+    content: $speed-800-path1;  
+    color: rgb(255, 255, 255);
+  }
+}
+.speed-800 .path2 {
+  &:before {
+    content: $speed-800-path2;  
+    margin-left: -1em;  
+    color: rgb(185, 190, 193);
+  }
+}
+.speed-800 .path3 {
+  &:before {
+    content: $speed-800-path3;  
+    margin-left: -1em;  
+    color: rgb(232, 39, 48);
+  }
+}
+.speed-800 .path4 {
+  &:before {
+    content: $speed-800-path4;  
+    margin-left: -1em;  
+    color: rgb(232, 39, 48);
+  }
+}
+.speed-800 .path5 {
+  &:before {
+    content: $speed-800-path5;  
+    margin-left: -1em;  
+    color: rgb(232, 39, 48);
+  }
+}
+.talktime {
+  &:before {
+    content: $talktime;     
+  }
+}
+.calling {
+  &:before {
+    content: $calling;     
+  }
+}
+.reports {
+  &:before {
+    content: $reports; 
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "xdr",
+  "version": "1.0.0",
+  "description": "A Chrome Extension starter kit built with React, TypeScript, SCSS, Bootstrap, EsLint, Prettier & Webpack"
+}

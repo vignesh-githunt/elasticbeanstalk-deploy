@@ -1,0 +1,50 @@
+{
+  "manifest_version": 2,
+  "name": "XDR - The Sales Development Robot",
+  "description": "The XDR is a personal Sales/Business/Market/Account Development Representative that works for you.",
+  "background": {
+    "scripts": ["static/js/background.js"]
+  },
+  "browser_action": {
+    "default_icon": {
+      "144": "icons/logo@144.png"
+    }
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Alt+X"
+      }
+    }
+  },
+  "content_scripts": [
+    {
+      "css": ["static/css/content.css"],
+      "js": ["static/js/content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://github.githubassets.com https://*.pusher.com https://api.mixpanel.com https://cdnjs.cloudflare.com; object-src 'self' chrome-extension://omkfaingifmnipkahnfblnebpbpfkfak/static/css/content.css.map chrome-extension://omkfaingifmnipkahnfblnebpbpfkfak/static/js/content.js.map chrome-extension://omkfaingifmnipkahnfblnebpbpfkfak/static/js/background.js.map",
+  "externally_connectable": {
+    "matches": [
+      "*://*.outboundworks.com/*",
+      "*://*.koncert.com/*",
+      "http://localhost:5006/*"
+    ]
+  },
+  "icons": {
+    "144": "icons/logo@144.png",
+    "16": "icons/logo@16.png",
+    "32": "icons/logo@32.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjZ1X9tgGoDmkcwa7hPAYhhnQ14oP5oQHEza1VZlacQZVZNbLveUd9YdORYUd0nUMafKEnGOPg3zl0iJyECpfUjbOghkkl99895mjuNoMlHf9S1AhVtxJGf2GFCbwjyTyMHHunNUo0LKy0me2o9AjXS/MsK8dAlZ+vKO5ckRdps35R5XQsZ9cuz7jcv7Ds9mCgLBCJHrQNgVKr9KBhJ7+SPZIZMA5GA1CZPrA3J6m8kKeK3Jwtqk4ppXBHRcnw00SErANwPpJb6abg8KQngtxeAYdGL7lAyTLmnBHkLb/eRZe8caKp2MzQv8cvFeCh3GD6EMVYbzCbhmu04bmHigJowIDAQAB",
+  "optional_permissions": ["https://*/*"],
+  "options_ui": {
+    "page": "options.html"
+  },
+  "permissions": ["cookies", "notifications", "storage"],
+  "short_name": "XDR",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "1.0.6",
+  "web_accessible_resources": ["/static/css/content.css", "/static/media/*"]
+}

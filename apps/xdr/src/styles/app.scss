@@ -1,0 +1,157 @@
+/*!
+ *
+ * Angle - Bootstrap Admin Template
+ *
+ * Version: 4.3
+ * Author: @themicon_co
+ * Website: http://themicon.co
+ * License: https://wrapbootstrap.com/help/licenses
+ *
+ */
+
+// Override bootstrap variables
+// @import '~libs/styles/src/lib/app/common/variables';
+
+.obw {
+  // Bootstrap
+  @import '~libs/styles/src/lib/bootstrap/bootstrap';
+
+  @import '~libs/styles/src/lib/bootstrap/functions';
+  @import '~libs/styles/src/lib/bootstrap/variables';
+  @import '~libs/styles/src/lib/bootstrap/mixins';
+  // Variables
+  @import '~libs/styles/src/lib/app/common/variables';
+  // Layout
+  @import '~libs/styles/src/lib/app/layout/layout';
+  @import '~libs/styles/src/lib/app/layout/layout-extra';
+  @import '~libs/styles/src/lib/app/layout/layout-animation';
+  @import '~libs/styles/src/lib/app/layout/top-navbar';
+  @import '~libs/styles/src/lib/app/layout/sidebar';
+  @import '~libs/styles/src/lib/app/layout/offsidebar';
+  @import '~libs/styles/src/lib/app/layout/user-block';
+  @import '~libs/styles/src/lib/app/layout/settings';
+  @import '~libs/styles/src/lib/app/layout/admin-header';
+  // Common
+  @import '~libs/styles/src/lib/app/common/page-loader';
+  @import '~libs/styles/src/lib/app/common/typo';
+  @import '~libs/styles/src/lib/app/common/bootstrap-reset';
+  @import '~libs/styles/src/lib/app/common/bootstrap-custom';
+  @import '~libs/styles/src/lib/app/common/button-extra';
+  @import '~libs/styles/src/lib/app/common/placeholder';
+  @import '~libs/styles/src/lib/app/common/cards';
+  @import '~libs/styles/src/lib/app/common/circles';
+  @import '~libs/styles/src/lib/app/common/dropdown-extra';
+  @import '~libs/styles/src/lib/app/common/half-float';
+  @import '~libs/styles/src/lib/app/common/animate';
+  @import '~libs/styles/src/lib/app/common/slim-scroll';
+  @import '~libs/styles/src/lib/app/common/inputs';
+  @import '~libs/styles/src/lib/app/common/utils';
+  @import '~libs/styles/src/lib/app/common/print';
+  // Elements
+  @import '~libs/styles/src/lib/app/elements/nestable';
+  @import '~libs/styles/src/lib/app/elements/notify';
+  @import '~libs/styles/src/lib/app/elements/spinner';
+  @import '~libs/styles/src/lib/app/elements/extension';
+  // Charts
+  @import '~libs/styles/src/lib/app/charts/radial-bar';
+  @import '~libs/styles/src/lib/app/charts/chart-flot';
+  @import '~libs/styles/src/lib/app/charts/chart-easypie';
+  // Form elements
+  @import '~libs/styles/src/lib/app/forms/form-validation';
+  @import '~libs/styles/src/lib/app/forms/form-tags';
+  @import '~libs/styles/src/lib/app/forms/form-datepicker';
+  @import '~libs/styles/src/lib/app/forms/form-wizard';
+  @import '~libs/styles/src/lib/app/forms/form-imgcrop';
+  @import '~libs/styles/src/lib/app/forms/dropzone';
+  @import '~libs/styles/src/lib/app/forms/plugins';
+  // Tables
+  @import '~libs/styles/src/lib/app/tables/datatable';
+  @import '~libs/styles/src/lib/app/tables/table-extras';
+  // Maps
+  @import '~libs/styles/src/lib/app/maps/gmap';
+  @import '~libs/styles/src/lib/app/maps/vector-map';
+  // Extras
+  @import '~libs/styles/src/lib/app/extras/timeline';
+  @import '~libs/styles/src/lib/app/extras/todo';
+  @import '~libs/styles/src/lib/app/extras/calendar';
+  @import '~libs/styles/src/lib/app/extras/mailbox';
+  @import '~libs/styles/src/lib/app/extras/plans';
+
+  .topnavbar {
+    .navbar-header {
+      margin: 0 auto;
+      .brand-logo {
+        width: 100%;
+      }
+    }
+    .animated-icon1 {
+      width: 30px;
+      height: 20px;
+      position: relative;
+      margin: 0px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.5s ease-in-out;
+      -moz-transition: 0.5s ease-in-out;
+      -o-transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+
+      span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: 0.25s ease-in-out;
+        -moz-transition: 0.25s ease-in-out;
+        -o-transition: 0.25s ease-in-out;
+        transition: 0.25s ease-in-out;
+      }
+    }
+    .animated-icon1 span:nth-child(1) {
+      top: 0px;
+    }
+
+    .animated-icon1 span:nth-child(2) {
+      top: 10px;
+    }
+
+    .animated-icon1 span:nth-child(3) {
+      top: 20px;
+    }
+
+    .animated-icon1.open span:nth-child(1) {
+      top: 11px;
+      -webkit-transform: rotate(135deg);
+      -moz-transform: rotate(135deg);
+      -o-transform: rotate(135deg);
+      transform: rotate(135deg);
+    }
+
+    .animated-icon1.open span:nth-child(2) {
+      opacity: 0;
+      left: -60px;
+    }
+
+    .animated-icon1.open span:nth-child(3) {
+      top: 11px;
+      -webkit-transform: rotate(-135deg);
+      -moz-transform: rotate(-135deg);
+      -o-transform: rotate(-135deg);
+      transform: rotate(-135deg);
+    }
+    .animated-icon1 span {
+      background: #f4f4f4;
+    }
+  }
+  @import '~libs/styles/src/lib/themes/theme-koncert';
+}
