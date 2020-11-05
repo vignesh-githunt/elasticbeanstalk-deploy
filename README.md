@@ -1,102 +1,73 @@
-# Koncert
+# Codefresh example of Ruby on Rails
 
-# Deploy Status
+Original version is at 	https://bitbucket.org/railstutorial/sample_app_4th_ed.git
 
-## Base App
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8bb1e9f5-b1ce-468d-bd5a-9d4c340f8c63/deploy-status)](https://app.netlify.com/sites/base-app-4a1be0/deploys)
-## Cadence
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1ee8c10c-6753-4fe1-8b2a-e8ba64d1ee36/deploy-status)](https://app.netlify.com/sites/cadence-c78b19/deploys)
-## Stories
-[![Netlify Status](https://api.netlify.com/api/v1/badges/09306b0e-e427-49aa-801e-b46aeba04ecf/deploy-status)](https://app.netlify.com/sites/stories-e49b97/deploys)
-## Dialers
-[![Netlify Status](https://api.netlify.com/api/v1/badges/cc9363ea-7fae-4e42-a6f3-416e74358352/deploy-status)](https://app.netlify.com/sites/dialers-313f10/deploys)
+It contains
+
+ * A Dockerfile
+ * A Codefresh build file
 
 
-This project was generated using [Nx](https://nx.dev).
+Original readme below
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+# Ruby on Rails Tutorial sample application
 
-🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+This is the reference implementation of the sample application for the 4th edition of [*Ruby on Rails Tutorial: Learn Web Development with Rails*](http://www.railstutorial.org/) by [Michael Hartl](http://www.michaelhartl.com/).
 
-## Adding capabilities to your workspace
+## License
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+All source code in the [Ruby on Rails Tutorial](http://railstutorial.org/) is available jointly under the MIT License and the Beerware License. See [LICENSE.md](LICENSE.md) for details.
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+## Getting started
 
-Below are our core plugins:
+To get started with the app, clone the repo and then install the needed gems:
 
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
+```
+$ cd /path/to/repos
+$ git clone https://bitbucket.org/railstutorial/sample_app_4th_ed.git sample_app_reference
+$ cd sample_app_reference
+$ bundle install --without production
+```
 
-There are also many [community plugins](https://nx.dev/nx-community) you could add.
+Next, migrate the database:
 
-## Generate an application
+```
+$ rails db:migrate
+```
 
-Run `nx g @nrwl/react:app my-app` to generate an application.
+Finally, run the test suite to verify that everything is working correctly:
 
-> You can use any of the plugins above to generate applications as well.
+```
+$ rails test
+```
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+If the test suite passes, you'll be ready to run the app in a local server:
 
-## Generate a library
+```
+$ rails server
+```
 
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
+To check out the code for a particular chapter, first find the branch name using
 
-> You can also use any of the plugins above to generate libraries as well.
+```
+$ git branch -a
+```
 
-Libraries are sharable across libraries and applications. They can be imported from `@koncert/mylib`.
+A branch called `remotes/orgin/foo-bar` can be checked out using `git checkout foo-bar`.
 
-## Development server
+Next, copy the contents of the `Gemfile` using a text editor and then use
 
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+```
+$ git checkout chapter-branch-name
+```
 
-## Code scaffolding
+to check out the chapter branch. Finally, copy the contents into the `Gemfile` and run
 
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
+```
+$ bundle update
+```
 
-## Build
+At this point, the branch should be working. (You have to copy the `Gemfile` contents because it's incredibly hard to keep all branches up-to-date, so only the main one is guaranteed to be current.)
 
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
-
-## ☁ Nx Cloud
-
-### Computation Memoization in the Cloud
-
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+For more information, see the
+[*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).

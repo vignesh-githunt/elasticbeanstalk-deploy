@@ -1,9 +1,0 @@
-export const ACTIVE = 'active';
-export const ACTIVE_TAB_ID = 'activeTab';
-export const AUTH_DATA = 'authData';
-export const USER_META_DATA = 'userMetaData__localstore__';
-export const CLIENT_LAST_ACTIVATED = 'ClientLastActivated__localstore__';
-export const CURRENT_URL = 'currentUrl';
-export const LOADED = 'isLoaded';
-export const MANUAL_LOGIN = 'manualLogin';
-export const PATHS = 'paths__localstore__';
